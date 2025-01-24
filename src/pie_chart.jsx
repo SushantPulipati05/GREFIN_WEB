@@ -95,7 +95,7 @@ export default function Component() {
                           y={viewBox.cy}
                           className="fill-foreground text-3xl font-bold"
                         >
-                          863
+                          634
                         </tspan>
                         <tspan
                           x={viewBox.cx}
