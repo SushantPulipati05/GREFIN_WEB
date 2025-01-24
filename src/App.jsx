@@ -3,6 +3,7 @@ import { SidebarInset, SidebarProvider, SidebarTrigger } from './components/ui/s
 import Header from './header'
 import Sidebar from './sidebar'
 import PieChart from './pie_chart'
+import BarChart from './bar_chart'
 import Calender from './calender'
 
 import logo from './assets/grefin_logo.png'
@@ -15,7 +16,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { ChevronRight, Ellipsis, Footprints, Radio, TrendingDown, TrendingUp } from 'lucide-react'
+import { ChevronRight, CircleArrowDown, CircleArrowRight, Ellipsis, Footprints, Forklift, Gift, Leaf, Plane, Radio, Square, Tag, TrendingDown, TrendingUp, Wifi, Zap } from 'lucide-react'
+import { Button } from './components/ui/button'
 
 
 
@@ -40,7 +42,7 @@ function App() {
                   <span className='text-gray-500 -mt-1 text-sm'>Get the overview of your green score and track your progress</span>
                 </div>
                 {/*<Calender />*/}
-                <p className='ml-auto '>idhar calendar ayega</p>
+                
               </div>
               <div className=' py-4 grid grid-cols-3 gap-4'>                
                <Card className='p-4 bg-green-950 text-white'>                 
@@ -95,44 +97,136 @@ function App() {
               <div className="grid grid-cols-2 gap-4 min-h-[70vh]" >
 
                   <div className=''>
-                    <Card className="h-full">
-                      <CardHeader>
-                        <CardTitle>Card Title</CardTitle>
-                        <CardDescription>Card Description</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <p>Card Content</p>
+                    <Card className="h-full p-4">
+                    <CardDescription className="flex items-center gap-2">
+                      <span className='font-bold text-green-500 text-lg'>Transactions</span>
+                      <Ellipsis className=' ml-auto' />
+                    </CardDescription> 
+                      <CardContent className="p-0">
+                        <div className="flex items-center gap-8 mt-6 p-0">
+                          <Zap className='w-12 text-blue-800' />
+                          <div className='flex flex-col gap-1'>
+                            <span className='text-green-500'> Electricity and Utilities </span>
+                            <span className='text-xs opacity-60'>Jul 12th 2024</span>                          
+                          </div>
+                          <div className="flex flex-col text-sm text-right gap-1 ml-9 opacity-60">
+                            <span>Completed</span>
+                            <span>OJWEJS7ISNC</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-8 mt-6 p-0">
+                          <Wifi className='w-12 text-blue-800' />
+                          <div className='flex flex-col gap-1'>
+                            <span className='text-green-500 '> Internet Comms Services </span>
+                            <span className='text-xs opacity-60'>Jul 12th 2024</span>                          
+                          </div>
+                          <div className="flex flex-col text-sm text-right gap-1 ml-9 opacity-60">
+                            <span>Completed</span>
+                            <span>OJWEJS7ISNC</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-8 mt-6 p-0">
+                          <Square className='w-12 text-blue-800' />
+                          <div className='flex flex-col gap-1'>
+                            <span className='text-green-500'> Office Supplies bought </span>
+                            <span className='text-xs opacity-60'>Jul 12th 2024</span>                          
+                          </div>
+                          <div className="flex flex-col text-sm text-right gap-1 ml-9 opacity-60">
+                            <span>Completed</span>
+                            <span>OJWEJS7ISNC</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-8 mt-6 p-0">
+                          <Plane className='w-12 text-blue-800' />
+                          <div className='flex flex-col gap-1'>
+                            <span className='text-green-500'> Travel and Accommodation </span>
+                            <span className='text-xs opacity-60'>Jul 12th 2024</span>                          
+                          </div>
+                          <div className="flex flex-col text-sm text-right gap-1 ml-9 opacity-60">
+                            <span>Completed</span>
+                            <span>OJWEJS7ISNC</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-8 mt-6 p-0">
+                          <Forklift className='w-12 text-blue-800' />
+                          <div className='flex flex-col gap-1'>
+                            <span className='text-green-500'> Logistics and Transportation </span>
+                            <span className='text-xs opacity-60'>Jul 12th 2024</span>                          
+                          </div>
+                          <div className="flex flex-col text-sm text-right gap-1 ml-9 opacity-60">
+                            <span>Completed</span>
+                            <span>OJWEJS7ISNC</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-8 mt-6 p-0">
+                          <Gift className='w-12 text-blue-800' />
+                          <div className='flex flex-col gap-1'>
+                            <span className='text-green-500'> Corporate Gift and Events </span>
+                            <span className='text-xs opacity-60'>Jul 12th 2024</span>                          
+                          </div>
+                          <div className="flex flex-col text-sm text-right gap-1 ml-9 opacity-60">
+                            <span>Completed</span>
+                            <span>OJWEJS7ISNC</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-8 mt-6 p-0">
+                          <Leaf className='w-12 text-blue-800' />
+                          <div className='flex flex-col gap-1'>
+                            <span className='text-green-500'> Utilities for Green Initiatives </span>
+                            <span className='text-xs opacity-60'>Jul 12th 2024</span>                          
+                          </div>
+                          <div className="flex flex-col text-sm text-right gap-1 ml-9 opacity-60">
+                            <span>Completed</span>
+                            <span>OJWEJS7ISNC</span>
+                          </div>
+                        </div>
                       </CardContent>
-                      <CardFooter>
-                        <p>Card Footer</p>
-                      </CardFooter>
                     </Card>
                   </div>
 
                   <div className='grid gap-4'>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Card Title</CardTitle>
-                      <CardDescription>Card Description</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p>Card Content</p>
-                    </CardContent>
-                    <CardFooter>
-                      <p>Card Footer</p>
-                    </CardFooter>
+                  <Card className='p-4 h-96'>
+                    <CardDescription className="flex items-center gap-2 mb-3">
+                      <span className='font-bold text-lg '>Statistics</span>
+                    </CardDescription> 
+                      <Separator />  
+                      <div className=' flex flex-col h-80'>
+                      <div className=' flex items-center gap-3 justify-center py-5 mt-3 mr-7 mb-3'>
+                        <img src={logo} alt="" className='w-6'/>
+                        <span className='text-5xl'>193</span>
+                        <span className='flex items-center '>
+                        <TrendingUp className='text-green-600 ml-9 mr-2'/>
+                        <span className='text-sm opacity-50  '>+35%</span>
+                        <span className='text-sm ml-1 opacity-70'>from last month</span>
+                        </span>
+                      </div>     
+                      <div className=''>
+                       <BarChart className="" />                      
+                      </div>                   
+                      </div> 
                   </Card>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Card Title</CardTitle>
-                      <CardDescription>Card Description</CardDescription>
+                  <Card className="bg-green-200">
+                    <CardHeader className="pb-2 pt-4">
+                      <CardTitle className="text-xl text-green-500">Grefin Market</CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <p>Card Content</p>
+                    <CardContent className="flex gap-3">
+                      <div className='flex flex-col gap-3'>
+                      <img src="https://www.delogue.com/hubfs/AdobeStock_562145128.jpeg" alt=""  className='w-56 rounded-xl'/>
+                      <Button className="w-56 rounded-2xl text-green-700 bg-green-400 transition-transform duration-300 hover:scale-105" >
+                        Buy Now
+                      </Button>
+                      </div>
+                      <div className='flex flex-col gap-3'>
+                        <div className='flex flex-col'>
+                          <span className='text-2xl text-green-700 font-bold'>Eco-friendly Fashion</span>
+                          <span className='text-xs opacity-60'>Sustainable fashion is not a trend but the future</span>
+                        </div>
+                        <Button className="flex h-28 rounded-3xl bg-green-400 text-green-700 transition-transform duration-300 hover:scale-105">                          
+                          <span className='text-lg font-bold '>Shop More</span>                         
+                          <CircleArrowRight className=' w-32' />                         
+                        </Button>
+                      </div>
                     </CardContent>
-                    <CardFooter>
-                      <p>Card Footer</p>
-                    </CardFooter>
                   </Card>
                   </div>
 
@@ -143,26 +237,40 @@ function App() {
             <Separator orientation="vertical" className="bg-slate-400"/>
 
 
-            <div className='bg-slate-200 grid gap-2 h-full w-1/4 p-4'>
+            <div className='bg-slate-200 grid gap-2 w-1/4 p-4'>
               <div className='flex'>
                 <PieChart />
               </div>
               <div className=''>
-                <Card className="h-full bg-green-200">
-                  <CardHeader>
-                    <CardTitle>Card Title</CardTitle>
-                    <CardDescription>Card Description</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p>Card Content</p>
-                  </CardContent>
-                  <CardFooter>
-                    <p>Card Footer</p>
-                  </CardFooter>
+                <Card className="h-full bg-green-200">                  
+                  <CardContent className="h-full flex flex-col p-4 h-24" >
+                    <div className="flex mb-3 ">
+                    <div className=' flex flex-col w-3/4 gap-1' >
+                      <div className=' text-2xl text-gray-600'>
+                      Level up your Green Score managing to the next level.
+                      </div>
+                      <div className=' text-xs opacity-60'>
+                      An any way to increase your Green Score with care and precision.
+                      </div>
+                      <div className=' flex text-2xl gap-3 font-bold items-center text-gray-600'>
+                      Try Premium
+                      <CircleArrowDown />
+                      </div>
+                    </div>
+                    <div className='w-1/4 '>
+                      <Tag className='w-20 opacity-70' />
+                    </div>
+                    </div>
+                    <div>
+                      <Button className="w-full rounded-2xl bg-green-500 text-green-800 transition-transform duration-300 hover:scale-105">
+                        Upgrade to Grefin+
+                      </Button>
+                    </div>
+                  </CardContent>                  
                 </Card>
               </div>
             </div>
-
+ 
 
           </div>
            </SidebarInset>

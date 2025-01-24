@@ -94,12 +94,12 @@ export default function AppSidebar() {
                    className="mb-2 rounded-xl data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                   >
                     <Avatar className="h-12 w-12 rounded-xl">
-                    <AvatarImage src={user} alt="tmkc" />
+                    <AvatarImage src="https://www.profilebakery.com/wp-content/uploads/2023/04/AI-Profile-Picture.jpg" alt="tmkc" className="bg-slate-600"/>
                     <AvatarFallback className="rounded-lg">CN</AvatarFallback>
                     </Avatar>
                     <div className="grid text-white font-light flex-1 text-left text-sm leading-tight">
-                      <span className="truncate font-semibold">Elon Musk</span>
-                      <span className="truncate text-xs">elonmusk69@gmail.com</span>
+                      <span className="truncate font-semibold">Jane Doe</span>
+                      <span className="truncate text-xs">janedoe@gmail.com</span>
                     </div>
                     <ChevronsUpDown className="ml-auto text-white" />                   
                   </SidebarMenuButton>
